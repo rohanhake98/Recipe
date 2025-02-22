@@ -447,3 +447,119 @@ html, body, #root {
 
 /*  */
 
+/* Add Recipe Section */
+.add-recipe-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-recipe-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/food.png');
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.add-recipe-content {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.add-recipe-section h2 {
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.add-recipe-section .lead {
+  color: var(--text-light);
+  font-size: 1.1rem;
+}
+
+.add-recipe-section .form-control {
+  border: 2px solid #eee;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.add-recipe-section .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.25rem rgba(62, 142, 65, 0.25);
+}
+
+.add-recipe-section img.img-fluid {
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  border: 5px solid white;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.add-recipe-section {
+  animation: slideIn 1s ease-out;
+}
+
+/* Home Page Specific Styles */
+.home-page {
+  overflow-x: hidden;
+}
+
+/* Categories Section */
+.categories-section {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.categories-section h2 {
+  color: var(--primary-color);
+  font-size: 2.2rem;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Recipe Card Enhancements */
+.recipe-card {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.recipe-card .card-img-top {
+  transition: transform 0.3s ease;
+}
+
+.recipe-card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.recipe-card .card-body {
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 70%, rgba(255, 255, 255, 1));
+}
